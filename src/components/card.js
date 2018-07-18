@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Input from './input';
+import Content from './content';
 
 class Card extends Component {
 
@@ -50,7 +51,7 @@ class Card extends Component {
             {title: 'Celebrity', state: this.state.celebTwo, name: 'celebTwo'},
             {title: 'Celebrity', state: this.state.celebThree, name: 'celebThree'},
             {title: 'Adjective', state: this.state.adjectiveFour, name: 'adjectiveFour'},
-            {title: 'Noun', state: this.state.nounTwo, name: 'nounTwo'},
+            {title: 'Noun', state: this.state.nounThree, name: 'nounThree'},
             {title: 'Celebrity', state: this.state.celebFour, name: 'celebFour'},
             {title: 'Adjective', state: this.state.adjectiveFive, name: 'adjectiveFive'},
             
@@ -61,6 +62,7 @@ class Card extends Component {
             {
                 inputData.map(data => Input((data), this.handleInputChange))
             }
+            <Content data={this.state}/>
             </div>
         )
     }
