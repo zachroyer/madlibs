@@ -40,14 +40,13 @@ class Card extends Component {
 
     handleFormSubmit(event) {
         event.preventDefault()
+        this.setState({ contentVisible: !this.state.contentVisible })
 
         if(this.state.contentVisible) {
-            this.setState({INITIAL_STATE})
+            this.setState(INITIAL_STATE)
         } else {
-            this.setState({contentVisible: true})
-        }
-
-        
+            this.setState({ contentVisible: true })
+                }
     }
 
     render() {
@@ -74,7 +73,7 @@ class Card extends Component {
 
         return (
             <form onSubmit={this.handleFormSubmit} className="card">
-                <div className='card_input'>
+                <div className='card__inputs'>
                     {
                         inputData.map((data, index) => {
                             return Input( (data), this.handleInputChange, index) 
