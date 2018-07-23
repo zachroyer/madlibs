@@ -11,6 +11,9 @@
 }
 
 .header {
+    font-family: 'Abel', sans-serif;
+    color: white;
+    text-align:center;
     align-self: center;
     h1 {
         z-index: -11;
@@ -25,7 +28,7 @@
         height: 110vh;
         width: 100vw;
         position: fixed;
-        background-color: #444444
+        background-color: #232323;
     }
 
     &__border {
@@ -37,7 +40,21 @@
         height: 110vh;
         width: 100vw;
         position: fixed;
-        background-color: #00AB79;
+        background-color: #ad0101;
+    }
+
+    h1 {
+        font-size: 36px;
+        font-weight:500;
+        line-height: 44px;
+    }
+
+    p {
+        color: rgba(255,255,255,0.75);
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 30px;
+        width: 350px;
     }
 }
 
