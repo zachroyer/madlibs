@@ -1,13 +1,22 @@
 .home {
     background-color: rgba(207, 207, 207, 0.06);
+    display: grid;
+
+    justify-items: center;
+    //align-items: center;
+    grid-template-rows: [header-s] 218px [header-e card-s] minmax(736px, 994px) [card-e]
+}
+
+.header {
+    align-self: center;
 }
 
 
 
-
 .card {
-    height: 736px;
-    width: 80%;
+    min-height: 736px;
+    max-hieght: 994px;
+    width: 1240;
     box-shadow: 0 4px 30px 0 rgba(0,0,0,.06);
     border-radius: 7px;
     
@@ -19,18 +28,24 @@
         display: grid;
         grid-template-rows: repeat(4, 1fr);
         grid-template-columns: repeat(4, 1fr);
+
+        justify-items: center;
+        align-items: center;
     }
 }
 
 .inputs {
-    &__title {
+    display: grid;
+    grid-template-columns: [number-s] 26px [number-e input-s] 1fr [input-e];
 
+    &__title {
+        grid-columns: input-s/input-e;
     }
     input {
-
+        grid-column: input-s/input-e;
     }
 
     &__number {
-
+        grid-column: number-s/number-e;
     }
 }
