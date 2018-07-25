@@ -40,7 +40,7 @@
         height: 110vh;
         width: 100vw;
         position: fixed;
-        background-color: #ad0101;
+        background-color: #e02c44;
     }
 
     h1 {
@@ -82,18 +82,42 @@
     }
 }
 
-.inputs {
+.input {
     display: grid;
+    // grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: [number-s] 26px [number-e input-s] 1fr [input-e];
 
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+
     &__title {
-        grid-columns: input-s/input-e;
+        grid-column: input-s/input-e;
+
+        border-top: 1px solid #B3B3B3;
+        color: #B3B3B3;
+        font-size: 13px;
+        font-weight: 300;
+
     }
     input {
         grid-column: input-s/input-e;
-    }
 
+        border: none;
+        font-size: 15px;
+        text-align: center;
+        
+        // width: 190px;
+        // height: 40px;
+    }
     &__number {
         grid-column: number-s/number-e;
+
+        background-color: #e02c44;
+        color: white;
+        font-size: 20px;
+        line-height: 24px;
+        padding-top: 1px;
+
+        border-radius: 50%;
     }
 }
