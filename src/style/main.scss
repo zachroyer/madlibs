@@ -1,3 +1,15 @@
+@mixin button {
+    height: 50px;
+    width: 300px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+    color: white;
+    font-family: 'Montserrat';
+    font-size: 22px;
+    text-align: center;
+}
+
+
 .home {
     position: relative;
 
@@ -63,7 +75,7 @@
 .card {
     min-height: 736px;
     max-hieght: 994px;
-    width: 1050px;
+    width: 1100px;
     box-shadow: 0 4px 30px 0 rgba(0,0,0,.06);
     border-radius: 7px;
     
@@ -72,19 +84,34 @@
     background-color: white;
 
     &__inputs {
-        //background-color: skyblue;
         display: grid;
         grid-template-rows: repeat(4, 27px);
         grid-template-columns: repeat(4, 1fr);
         
-        grid-row-gap: 120px;
-        margin-top: 66px;
-        margin-left: 83px;
-        margin-right: 83px;
+        grid-row-gap: 135px;
+        
+        margin: 66px 20px 0 20px;
         
         justify-items: center;
         align-items: center;
     }
+    
+    button:focus {
+        outline: none;
+    }
+
+    button {
+        justify-self: center;
+    }
+
+    &__generate {
+        background-color: #e02c44;
+        @include button;
+    }
+
+    &__clear {
+        background-color: #2c44df;
+        @include button;
 }
 
 .input {
@@ -141,4 +168,5 @@
         width: 26px;
         border-radius: 50%;
     }
+}
 }
