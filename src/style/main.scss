@@ -4,7 +4,7 @@
     border-radius: 4px;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
     color: white;
-    font-family: 'Montserrat';
+    font-family: 'Abel';
     font-size: 22px;
     text-align: center;
 }
@@ -102,6 +102,7 @@
 
     button {
         justify-self: center;
+        transform: translateY(50%);
     }
 
     &__generate {
@@ -112,6 +113,24 @@
     &__clear {
         background-color: #2c44df;
         @include button;
+    }
+
+    &__content {
+        width: 1100px;
+        height: 297px;
+        background-color: #f2f2f2;
+
+        justify-self: center;
+        margin-bottom: 84px;
+
+        p {
+            padding: 50px 47px;
+            font-family: 'Montserrat';
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 29px;
+        }
+    }
 }
 
 .input {
@@ -168,5 +187,4 @@
         width: 26px;
         border-radius: 50%;
     }
-}
 }
